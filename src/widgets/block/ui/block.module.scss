@@ -1,0 +1,33 @@
+.vertical {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.horizontal {
+  display: flex;
+  flex-direction: row;
+}
+
+.blue {
+  background-color: #a5c4ff33;
+}
+
+.white {
+  background-color: var(--white-color);
+}
+
+.gradient {
+  background-image: linear-gradient(to right, #85e2e480, #a5c4ff80);
+}
+
+.block {
+  border-radius: 24px;
+  box-shadow: 0 2px 6px #0400851f;
+}
+
+.step {
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 39px;
+}

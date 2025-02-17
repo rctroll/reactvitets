@@ -1,0 +1,133 @@
+.avitoReviews {
+  display: flex;
+  flex-direction: column;
+  /*align-items: center;*/
+  width: 100%;
+  padding: 80px 0;
+
+  .title {
+    margin-bottom: 40px;
+  }
+
+  .reviewsContainer {
+    width: 125%;
+    position: relative;
+    min-width: 100vh;
+  }
+  .divavitorev {
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+  }
+  .reviewsScroll {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-behavior: smooth !important;
+    padding: 20px 0;
+    scrollbar-width: thin!important;
+
+    /* Hide scrollbar for Chrome, Safari and Opera */
+    &::-webkit-scrollbar {
+      display: auto;
+    }
+
+    /* Hide scrollbar for IE, Edge and Firefox */
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .scrollButton {
+  /*  position: absolute;*/
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--white-color);
+    border: 1px solid var(--gray-200);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 2;
+    transition: all 0.3s ease;
+    color: black;
+
+    &:hover {
+      background: #A5C4FF;
+    }
+
+    &Left {
+    /*  left: -50px;*/
+    margin-left: 10px;
+    }
+
+    &Right {
+    /*  right: -50px;*/
+    margin-left: 5px;
+    }
+  }
+
+  .reviewCard {
+    min-width: 520px;
+    max-width: 520px;
+    padding: 24px;
+    background: var(--white-color);
+    border: 1px solid var(--gray-200);
+    border-radius: 12px;
+    transition: all 0.3s ease;
+
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+  }
+
+  .avitoReviews_btn {
+    padding: 12px 24px;
+    background: #A5C4FF;
+    color: black;
+    border-radius: 8px;
+
+    transition: all 0.3s ease;
+
+
+  }
+}
+
+// Mobile styles
+@media (max-width: 768px) {
+  .avitoReviews {
+    padding: 40px 0;
+
+    .title {
+      font-size: 28px;
+      margin-bottom: 24px;
+    }
+    .reviewsContainer {
+      min-width: none;
+    }
+
+    .reviewsContainer {
+      padding: 0 20px;
+    }
+
+    .scrollButton {
+      display: none; // Hide arrows on mobile
+    }
+
+    .reviewCard {
+      min-width: 300px;
+      max-width: 300px;
+      padding: 16px;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .avitoReviews {
+    .reviewCard {
+      min-width: 280px;
+      max-width: 280px;
+    }
+  }
+}

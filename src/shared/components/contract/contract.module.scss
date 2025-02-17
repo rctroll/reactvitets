@@ -1,0 +1,114 @@
+.contract {
+  background-color: white;
+  border-radius: 32px;
+  padding: 24px 24px 32px 24px;
+  box-sizing: border-box;
+  height: fit-content;
+  width: 285px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  gap: 20px;
+
+  &[data-colapsed=true] {
+    flex-direction: row;
+    border-radius: 16px;
+    padding: 12px 12px 12px 18px;
+
+    .contract__image {
+      display: none;
+    }
+
+    .contract_text {
+      max-width: 200px;
+    }
+
+    .contract__price {
+      display: none;
+    }
+
+    .contract__button {
+      border-radius: 0 16px 16px 0;
+      width: 55px;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+  }
+
+  &__image {
+    width: 220px;
+  }
+
+  &__price {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    line-height: 25px;
+    align-self: flex-start;
+  }
+
+  &_text {
+    max-width: 100%;
+    align-self: flex-start;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+    &_sm {
+      font-weight: 400;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .contract {
+    width: 350px;
+
+    &[data-colapsed=true] {
+      .contract_text {
+        max-width: 250px;
+      }
+    }
+
+    &_text {
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 25px;
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  .contract {
+    width: 165px;
+    border-radius: 16px;
+    padding: 12px;
+
+    &[data-colapsed=true] {
+      .contract__button {
+        border-radius: 0 16px 16px 0;
+        width: 40px;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+    }
+
+    .contract__image {
+      width: 115px
+    }
+
+    &_text {
+      font-size: 14px;
+      line-height: 20px;
+
+      &_sm {
+        font-size: 12px;
+        line-height: 17px;
+      }
+    }
+  }
+}

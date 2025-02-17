@@ -1,0 +1,341 @@
+.banner {
+  background-image: linear-gradient(#8ab3ff, #bfd5ff);
+  width: 100%;
+  max-width: 1240px;
+  height: 100%;
+  max-height: 540px;
+  border-radius: 32px;
+  padding: 32px 40px 42px 50px;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  margin: 50px auto 0 auto;
+
+  &__info {
+    z-index: 10;
+    max-width: 420px;
+
+    &_subtitle {
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 25px;
+      text-wrap: balance;
+      display: flex;
+      flex-direction: column;
+      padding-bottom: 50px;
+    }
+
+    &_btn {
+      background-color: white !important;
+      width: 100% !important;
+      max-width: 270px !important;
+      box-shadow: 0 0 30px 5px #ffffff66;
+    }
+  }
+
+  &__arrow {
+    position: absolute;
+    pointer-events: none;
+    width: 290px;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+  }
+
+  &__links {
+    z-index: 10;
+
+    &_item {
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      background-color: white;
+      border-radius: 50px;
+      padding: 12px 24px 12px 32px;
+      transition: all 0.3s;
+    }
+
+    &_declarations {
+      position: absolute;
+      right: 15%;
+      top: 45%;
+      transform: translate(-15%, -45%);
+
+      &:hover {
+        transform: translate(-15%, -49%);
+      }
+    }
+
+    &_sgr {
+      position: absolute;
+      right: 5%;
+      top: 45%;
+      transform: translate(-5%, -45%);
+
+      &:hover {
+        transform: translate(-5%, -49%);
+      }
+    }
+
+    &_letters {
+      position: absolute;
+      right: 8%;
+      top: 60%;
+      transform: translate(-8%, -60%);
+
+      &:hover {
+        transform: translate(-8%, -64%);
+      }
+    }
+
+    &_certificate {
+      position: absolute;
+      right: 10%;
+      top: 30%;
+      transform: translate(-10%, -30%);
+
+      &:hover {
+        transform: translate(-10%, -34%);
+      }
+    }
+  }
+}
+
+.formModal {
+  max-height: fit-content;
+}
+
+@media (max-width: 1045px) {
+  .banner {
+    &__arrow {
+      width: 200px;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    &__links {
+      &_sgr {
+        position: absolute;
+        right: 2%;
+        top: 45%;
+        transform: translate(-2%, -45%);
+
+        &:hover {
+          transform: translate(-2%, -49%);
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 850px) {
+  .banner {
+    &__arrow {
+      display: none;
+    }
+
+    &__links {
+      &_sgr {
+        position: absolute;
+        right: 2.5%;
+        top: 45%;
+        transform: translate(-2.5%, -45%);
+
+        &:hover {
+          transform: translate(-2.5%, -49%);
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .banner {
+    padding: 32px 40px 42px 40px;
+    margin: 32px auto 0 auto;
+
+    &__info {
+      &_title {
+        max-width: 240px;
+        font-size: 32px !important;
+        line-height: 39px !important;
+        font-weight: 600 !important;
+      }
+
+      &_subtitle {
+        max-width: 270px;
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: 400;
+      }
+
+      &_btn {
+        width: 195px !important;
+        height: 41px !important;
+        font-size: 13px !important;
+      }
+    }
+
+    &__arrow {
+      width: 180px;
+    }
+
+    &__links {
+      &_item {
+        padding: 10px 16px 10px 20px;
+      }
+
+      &_declarations {
+        right: 15%;
+        top: 45%;
+        transform: translate(-15%, -45%);
+
+        &:hover {
+          transform: translate(-15%, -49%);
+        }
+      }
+
+      &_sgr {
+        right: 2%;
+        top: 45%;
+        transform: translate(-2%, -45%);
+
+        &:hover {
+          transform: translate(-2%, -49%);
+        }
+      }
+
+      &_letters {
+        right: 6%;
+        top: 60%;
+        transform: translate(-6%, -60%);
+
+        &:hover {
+          transform: translate(-6%, -64%);
+        }
+      }
+
+      &_certificate {
+        right: 10%;
+        top: 30%;
+        transform: translate(-10%, -30%);
+
+        &:hover {
+          transform: translate(-10%, -34%);
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .banner {
+    flex-direction: column;
+
+    &__info {
+      &_btn {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin-bottom: 40px;
+      }
+    }
+
+    &__links {
+      display: grid;
+      grid-template-columns: repeat(2, auto);
+      grid-template-rows: repeat(2, auto);
+      grid-auto-rows: 100px;
+      grid-auto-flow: column;
+      gap: 10px;
+
+      &_sgr {
+        width: fit-content;
+        position: static;
+        transform: none;
+
+        &:hover {
+          transform: none;
+        }
+      }
+
+      &_letters {
+        width: fit-content;
+        position: static;
+        transform: none;
+        
+        &:hover {
+          transform: none;
+        }
+      }
+
+      &_declarations {
+        width: fit-content;
+        position: static;
+        transform: none;
+
+        &:hover {
+          transform: none;
+        }
+      }
+
+      &_certificate {
+        width: fit-content;
+        position: static;
+        transform: none;
+
+        &:hover {
+          transform: none;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 525px) {
+  .banner {
+    max-height: fit-content;
+    padding: 20px 24px;
+    margin: 24px auto 0 auto;
+    overflow: hidden;
+
+    &__info {
+      &_title {
+        max-width: 95%;
+        font-size: 30px !important;
+        text-wrap: balance;
+      }
+    }
+
+    &__links {
+      grid-template-columns: fit-content(100%) fit-content(100%);
+      grid-template-rows: repeat(3, auto);
+      grid-template-areas:
+        'item1 item1'
+        'item2 item3'
+        'item4 item4';
+
+      &_item {
+        padding: 8px 16px 8px 16px;
+        font-size: 14px;
+        line-height: 17px;
+      }
+
+      &_certificate {
+        grid-area: item1;
+      }
+
+      &_declarations {
+        grid-area: item2;
+      }
+
+      &_sgr {
+        grid-area: item3;
+      }
+
+      &_letters {
+        grid-area: item4;
+      }
+    }
+  }
+}

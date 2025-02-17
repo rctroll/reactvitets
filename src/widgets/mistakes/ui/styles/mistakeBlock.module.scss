@@ -1,0 +1,134 @@
+.block {
+  display: flex;
+  flex-direction: column;
+
+  &__arrow {
+    align-self: center;
+  }
+
+  &__top {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    min-height: 170px;
+    max-width: 400px;
+    width: 100%;
+    gap: 16px;
+    border: 2px solid var(--border-color);
+    padding: 20px 26px;
+  }
+
+  &__bottom {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    max-width: 400px;
+    min-height: 200px;
+    gap: 16px;
+    padding: 20px 26px;
+    position: relative;
+    top: -10px;
+
+    &_purple {
+      background: linear-gradient(to right, #FAA5FF80,#C5A6FF80 ) !important;
+    }
+
+    &_yellow {
+      background: linear-gradient(to right, #FFE77180, #FFB72766) !important;
+    }
+  }
+}
+
+.title {
+  font-weight: 500;
+  color: var(--gray-secondary-color);
+}
+
+.arrow {
+  position: relative;
+  
+  border-width: 2px;
+  border-style: solid;
+  width: 2px;
+  height: 100px;
+
+  &::after {
+    content: '';
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    bottom: -10%;
+    left: -60%;
+    transform: translate(-60%, 10%);
+    rotate: 45deg;
+  }
+
+  &__blue {
+    border-image: linear-gradient(to right, #A5C4FF, #85E2E4) 1;
+
+    &::after {
+      background: linear-gradient(to top right, #A5C4FF, #85E2E4);
+    }
+  }
+
+  &__purple {
+    border-image: linear-gradient(to right, #FAA5FF,#C5A6FF) 1;
+
+    &::after {
+      background: linear-gradient(to top right, #FAA5FF, #C5A6FF);
+    }
+  }
+
+  &__yellow {
+    border-image: linear-gradient(to right, #FFDB2B, #FFB727) 1;
+
+    &::after {
+      background: linear-gradient(to top right, #FFDB2B, #FFB727);
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .block {
+    svg {
+      width: 37px;
+      height: 37px;
+    }
+  }
+}
+
+@media (max-width: 630px) {
+  .title {
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  .arrow {
+    height: 60px;
+
+    &::after {
+      bottom: -15%;
+      left: -60%;
+      transform: translate(-60%, 15%);
+    }
+  }
+
+  .block {
+    svg {
+      width: 32px;
+      height: 32px;
+    }
+
+    &__top {
+      min-height: unset;
+      padding: 18px 20px;
+      gap: 12px;
+    }
+
+    &__bottom {
+      padding: 18px 20px;
+      min-height: unset;
+      gap: 12px;
+    }
+  }
+}

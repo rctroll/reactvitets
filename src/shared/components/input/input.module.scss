@@ -1,0 +1,59 @@
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/fonts/Montserrat/Montserrat-Italic-VariableFont_wght.ttf') format('truetype');
+}
+
+.container{
+  display: inline-flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.default {
+  border: 1px solid var(--border_input);
+  border-radius: 16px;
+  padding: 16px 24px;
+  width: 100%;
+  font-size: 19px;
+  box-sizing: border-box;
+  line-height: 23px;
+
+  &::placeholder {
+    font-family: 'Montserrat', serif;
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 23px;
+    color: var(--border_input);
+  }
+
+  &:hover {
+    border: 1px solid var(--dark_blue-color);
+  }
+
+  &:focus {
+    border: 1px solid var(--dark_blue-color);
+    background: var(--backgrd_input);
+    outline: none;
+  }
+
+  &:not(:placeholder-shown) {
+    border: 1px solid var(--dark_blue-color);
+  }
+
+}
+
+input.error {
+  border-color: var(--error_input) !important;
+}
+
+.error_message{
+  color: var(--error_input);
+  font-size: 14px;
+  margin-top: 8px;
+  font-weight: 400;
+  line-height: 17px;
+  font-family: 'Montserrat', serif;
+  border-color: var(--error_input);
+}
+
+

@@ -1,0 +1,260 @@
+.header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: all 0.3s ease-in-out;
+
+  &.headerInitial {
+    background: #fff;
+    box-shadow: 0em 0.125em 0.25em rgba(0, 0, 0, 0.06);
+  }
+
+  &.headerScrolled {
+    background: #fff;
+    box-shadow: 0em 0.125em 0.625em rgba(0, 0, 0, 0.1);
+    padding: 0.625em 1.25em;
+  }
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.topSection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25em 2.5em;
+}
+
+.divider {
+  width: calc(100% - 5.5em);
+  height: 0.0625em;
+  background-color: #e0e0e0;
+  margin: 0.325em auto;
+  transition: opacity 0.3s ease;
+  box-sizing: border-box;
+}
+
+.bottomSection {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.825em 2.5em;
+
+  .navCentered {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    gap: 2.5em;
+
+    .link {
+      font-size: 1em;
+      color: #000;
+      font-weight: 400;
+      text-decoration: none;
+      transition: all 0.2s ease-in-out;
+
+      //я поменяла, конечно, но я не очень понимаю, как сделать, чтобы ничего не двигалось
+
+      &:hover {
+        font-weight: 600;
+        transform: scale(1.01);
+      }
+    }
+  }
+
+  .callbackBtn {
+    background-color: #e8eefa;
+    padding: 0.875em 1.5em;
+    border-radius: 0.875em;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: #d0dff5;
+    }
+  }
+}
+
+.navScrolled {
+  display: flex;
+  justify-content: center;
+  gap: 1.25em;
+
+  .link {
+    font-size: 1em;
+    color: #000;
+    text-decoration: none;
+
+    &:hover {
+      font-weight: 600;
+    }
+  }
+}
+
+.callbackBtnScrolled375 {
+  background-color: #e8eefa;
+  padding: 0.5em 0.75em;
+  font-size: 0.75em;
+  border-radius: 0.625em;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #d0dff5;
+  }
+}
+
+.mainSectionScrolled768 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.625em 1.25em;
+
+  .callbackBtnScrolled {
+    background-color: #e8eefa;
+    padding: 0.625em 0.75em;
+    font-size: 0.875em;
+    border-radius: 0.625em;
+    cursor: pointer;
+    position: absolute;
+    margin-left: 37.1875em;
+
+    &:hover {
+      background-color: #d0dff5;
+    }
+  }
+
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.3125em;
+    width: 1.5em;
+    height: 1.5em;
+    cursor: pointer;
+    transform: scaleX(-1);
+
+    span {
+      display: block;
+      height: 0.125em;
+      background-color: #000;
+      border-radius: 0.125em;
+      transition: transform 0.3s, background-color 0.3s;
+    }
+
+    .one {
+      width: 100%;
+    }
+
+    .two {
+      width: 65%;
+    }
+
+    .three {
+      width: 40%;
+    }
+  }
+}
+
+.mainSectionScrolled {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.625em 1.25em;
+
+  .callbackBtnScrolled {
+    background-color: #e8eefa;
+    padding: 0.625em 0.75em;
+    font-size: 0.875em;
+    border-radius: 0.625em;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #d0dff5;
+    }
+  }
+
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.3125em;
+    width: 1.5em;
+    height: 1.5em;
+    cursor: pointer;
+    transform: scaleX(-1);
+
+    span {
+      display: block;
+      height: 0.125em;
+      background-color: #000;
+      border-radius: 0.125em;
+      transition: transform 0.3s, background-color 0.3s;
+    }
+
+    .one {
+      width: 100%;
+    }
+
+    .two {
+      width: 65%;
+    }
+
+    .three {
+      width: 40%;
+    }
+  }
+}
+
+.contacts {
+  display: flex;
+  gap: 32px;
+
+  .contactItem {
+    display: flex;
+    align-items: center;
+    //gap: 12px;
+
+    .contactText {
+      font-size: 18px;
+      line-height: 20px;
+      color: #000;
+      //margin-right: 16px;
+      margin-left: -14px;
+    }
+  }
+
+  .contactIcon {
+    //margin-right: 10px;
+  }
+}
+
+.contactsScrolled {
+  display: flex;
+  gap: 0.625em;
+  margin-top: 0.375em;
+
+  .contactIcon img {
+    height: 1.8125em;
+    transition: transform 0.3s;
+  }
+}
+
+@media (max-width: 1100px) {
+  .navScrolled {
+    gap: 10px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .bottomSection {
+    .navCentered {
+      gap: 16px;
+    }
+  }
+}

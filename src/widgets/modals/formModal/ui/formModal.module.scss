@@ -1,0 +1,81 @@
+.formModal {
+  max-width: 570px;
+  width: 100%;
+  padding: 32px 42px 60px 42px;
+
+  &__header {
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &_title {
+      color: var(--dark_blue-color);
+    }
+
+    &_btn {
+      background-color: transparent;
+      box-shadow: none;
+
+      &:hover {
+        transform: none;
+      }
+    }
+  }
+
+  &__inputs {
+    margin-bottom: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  &__agreements {
+    margin-bottom: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    &_policy {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    &_text {
+      font-size: 12px;
+      line-height: 17px;
+      font-weight: 300;
+      text-wrap: pretty;
+    }
+
+    &_notifications {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+  }
+
+  &__btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 375px) {
+  .formModal {
+    padding: 24px 24px 40px 24px;
+
+    &__header {
+      margin-bottom: 20px;
+    }
+
+    &__agreements {
+      margin-bottom: 28px;
+
+      &_text {
+        font-size: 8px;
+        line-height: 11px;
+      }
+    }
+  }
+}

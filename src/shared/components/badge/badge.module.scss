@@ -1,0 +1,18 @@
+.container {
+  border-radius: 18px;
+  padding: 20px 32px;
+  max-width: 343px;
+  width: 100%;
+
+  box-shadow: 0 2px 6px 0 rgba(68, 83, 113, 0.05), 0 0 8px 0 rgba(68, 83, 113, 0.1);
+  background: linear-gradient(
+    227deg,
+    rgba(165, 196, 255, 0.5) 0%,
+    rgba(133, 226, 228, 0.5) 100%
+  );
+  text {
+    font-weight: 500;
+    font-size: 18px;
+    color: #000;
+  }
+}

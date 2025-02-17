@@ -1,0 +1,161 @@
+.button {
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 18px;
+  font-weight: 500;
+  border: 1px solid transparent;
+  overflow: hidden;
+
+  &_transparent {
+    background-color: transparent;
+    border: none;
+  }
+
+  &_primary {
+    background-color: #A5C4FF;
+    box-shadow: 0px 2px 4px #04008533;
+    border-radius: 12px;
+
+    &:hover {
+      border: 1px solid white;
+      transform: translate(0, -2.5px);
+    }
+
+    &:active {
+      color: white;
+      transition: none;
+    }
+  }
+
+  &_secondary {
+    background-color: #A5C4FF;
+
+    &:hover {
+      transform: translate(0, -2.5px);
+    }
+    
+    &:active {
+      color: white;
+      transition: none;
+    }
+
+    &:disabled {
+      background-color: #dbe7ff;
+      color: #bac0cc;
+    }
+  }
+
+  &_slider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+
+    &_secondary {
+      background-color: #A5C4FF;
+      
+      &:hover {
+        border: 1px solid #040085;
+      }
+    }
+
+    &:hover {
+      border: 1px solid #040085;
+    }
+  }
+
+  &_outlined {
+    background-color: transparent;
+    border: 2px solid #A5C4FF;
+
+    &_secondary {
+      background-color: #E8EEFA;
+
+      &:hover {
+        border: 1px solid #040085;
+        transform: translate(0, -2.5px);
+      }
+
+      &:active {
+        color: #040085;
+        transition: none;
+      }
+    }
+
+    &:hover {
+      background-color: #A5C4FF;
+      transform: translate(0, -2.5px);
+    }
+
+    &:active {
+      color: white;
+      transition: none;
+    }
+  }
+
+  &_arrow {
+    background-color: #A5C4FF;
+  }
+
+  &_rounded_full {
+    border-radius: 9999%;
+  }
+
+  &_rounded_lg {
+    border-radius: 14px;
+  }
+
+  &_rounded_md {
+    border-radius: 12px;
+  }
+
+  &_rounded_sm {
+    border-radius: 10px;
+  }
+
+  &_text_lg {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 22px;
+  }
+
+  &_text_md {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+  }
+
+  &_text_sm {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17px;
+  }
+
+  &_large {
+    height: 54px;
+    width: fit-content;
+    padding: 16px 32px;
+  }
+
+  &_medium {
+    height: 41px;
+    width: fit-content;
+    padding: 14px 24px;
+  }
+
+  &_small {
+    width: 130px;
+    height: 33px;
+    width: fit-content;
+    padding: 8px 12px;
+  }
+
+  &_icon {
+    width: 49px;
+    height: 49px;
+  }
+}

@@ -1,0 +1,118 @@
+.team {
+  padding: 120px 0px;
+  &__container {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.title {
+  font-weight: 600;
+  font-size: 40px;
+}
+
+.descr {
+  font-size: 18px;
+  line-height: 150%;
+  font-weight: 500;
+  color: #000;
+  border-radius: 20px;
+  padding: 12px 32px 18px 32px;
+  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.04);
+  background: #fff;
+  min-height: 151px;
+  margin-top: 32px;
+
+  background-image: url('../assets/descrBG.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center bottom;
+  span {
+    font-weight: 600;
+    color: #040085;
+  }
+}
+.team__container_wrapper {
+  overflow: hidden;
+  width: 100%;
+}
+
+@media (min-width:1000px) {
+  .team__container_wrapper {
+    overflow: visible!important;
+  }
+}
+
+.team__container {
+  gap: 20px;
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.buttons {
+  display: none;
+  align-items: center;
+  justify-content: end;
+  gap: 14px;
+
+  margin-top: 60px;
+  &__item {
+    width: 50px;
+    height: 50px;
+    background: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    svg {
+      width: 20px;
+      height: 20px;
+    }
+  }
+}
+
+.icon {
+  transform: rotate(180deg);
+}
+
+@media (max-width: 1220px) {
+  .team {
+    padding: 80px 0;
+  }
+  .buttons {
+    display: flex;
+  }
+  .team {
+    &__container {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  .team__container > * {
+    flex: 0 0 32%;
+  }
+}
+
+@media (max-width: 920px) {
+  .team {
+    &__container {
+      gap: 12px;
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  .team__container > * {
+    flex: 0 0 48%;
+  }
+}
+
+@media (max-width: 600px) {
+  .descr {
+    margin-top: 32px;
+    padding: 20px 24px;
+    font-size: 14px;
+  }
+
+  .title {
+    font-size: 24px;
+  }
+}

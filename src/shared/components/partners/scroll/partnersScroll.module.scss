@@ -1,0 +1,21 @@
+.partnersScroll {
+  display: flex;
+  overflow-x: auto;
+  gap: 12px;
+  scroll-snap-type: x mandatory;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  .partnerCard {
+    scroll-snap-align: start;
+  }
+}
+
+
+@media (max-width: 375px) {
+  .partnersScroll {
+    gap: 6px;
+  }
+}

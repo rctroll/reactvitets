@@ -1,0 +1,30 @@
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.3125em;
+  width: 1.5em;
+  height: 1.5em;
+  cursor: pointer;
+  transform: scaleX(-1);
+
+  span {
+    display: block;
+    height: 0.125em;
+    background-color: #000;
+    border-radius: 0.125em;
+    transition: transform 0.3s, background-color 0.3s;
+  }
+
+  .one {
+    width: 100%;
+  }
+
+  .two {
+    width: 65%;
+  }
+
+  .three {
+    width: 40%;
+  }
+}

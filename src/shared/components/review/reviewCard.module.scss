@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+.reviewCard {
+  display: flex;
+  font-family: "Montserrat", serif;
+  flex-direction: column;
+  box-shadow: 0px 2px 8px #0000001F;
+  max-width: 525px;
+  height: 325px;
+  border-radius: 24px;
+  box-sizing: border-box;
+  padding: 18px 24px;
+  gap: 12px;
+
+  &__group {
+    display: flex;
+
+    &_vertical {
+      flex-direction: column;
+    }
+
+    &_horizontal {
+      flex-direction: row;
+    }
+  }
+
+  &__text {
+    color: black;
+
+    &_secondary {
+      font-weight: 400;
+      color: #6D6C6C;
+    }
+  }
+
+  &__image {
+    width: 38px;
+    height: 38px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #d4e24b;
+    border: 0;
+    outline: 0;
+    border-radius: 50%;
+  }
+
+  &__reviewText {
+    margin: 0;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 25px;
+    text-wrap: wrap;
+    overflow: hidden;
+  }
+
+  &__star {
+    width: 24px;
+    height: 24px;
+  }
+
+  &__description {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  &__header {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+  }
+
+  &__title {
+    font-weight: 600;
+    line-height: 22px;
+    font-size: 18px;
+  }
+
+  &__date {
+    font-size: 14px;
+    line-height: 17px;
+  }
+
+  &__info {
+    &_text {
+      font-size: 18px;
+      line-height: 22px;
+      letter-spacing: -0.75px;
+    }
+  }
+}
+
+@media (max-width: 550px) {
+  .reviewCard {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 500px) {
+  .reviewCard {
+    &__reviewText {
+      font-size: 16px;
+      line-height: 16.75px;
+      overflow: hidden;
+    }
+
+    &__reviewText {
+      text-overflow: ellipsis;
+    }
+  }
+}

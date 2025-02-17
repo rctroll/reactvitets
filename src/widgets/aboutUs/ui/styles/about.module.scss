@@ -1,0 +1,155 @@
+.about {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.aboutBlock {
+  width: 100%;
+  padding: 24px 28px;
+  max-width: 1240px;
+  background: linear-gradient(rgba(255,255,255,0.93), rgba(255,255,255,0.93)), url('../../../../public/icons/nordtest.png');
+  background-position: bottom;
+  background-repeat: repeat-x;
+
+  &__info {
+    font-weight: 500;
+  }
+}
+
+.blocks {
+  display: flex;
+  gap: 32px;
+}
+
+.block {
+  display: flex;
+  flex: 1;
+  flex-direction: column !important;
+  gap: 16px;
+  padding: 18px 24px;
+
+  &_subtitle {
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 500;
+  }
+}
+
+.market {
+  border-left: 4px solid var(--light-purple_icon);
+
+  &_title {
+    color: var(--light-purple_icon);
+  }
+}
+
+.declaration {
+  border-left: 4px solid var(--light-blue_icon);
+
+  &_title {
+    color: var(--light-blue_icon);
+  }
+}
+
+.certificate {
+  border-left: 4px solid var(--light-green_icon);
+
+  &_title {
+    color: var(--light-green_icon);
+  }
+}
+
+.client {
+  border-left: 4px solid var(--orange_icon);
+
+  &_title {
+    color: var(--orange_icon);
+  }
+}
+
+@media (max-width: 870px) {
+  .blocks {
+    gap: 24px;
+  }
+
+  .market {
+    &_title {
+      font-size: 32px;
+      font-weight: 600;
+      line-height: 39px;
+    }
+  }
+  
+  .declaration {
+    &_title {
+      font-size: 32px;
+      font-weight: 600;
+      line-height: 39px;
+    }
+  }
+  
+  .certificate {
+    &_title {
+      font-size: 32px;
+      font-weight: 600;
+      line-height: 39px;
+    }
+  }
+  
+  .client {
+    &_title {
+      font-size: 32px;
+      font-weight: 600;
+      line-height: 39px;
+    }
+  }
+  
+  .block {
+    &_subtitle {
+      font-size: 14px;
+      line-height: 17px;
+      font-weight: 500;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .about {
+    gap: 32px;
+  }
+}
+
+@media (max-width: 735px) {
+  .blocks {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(2, auto);
+  }
+}
+
+@media (max-width: 375px) {
+  .blocks {
+    gap: 16px;
+  }
+
+  .aboutBlock {
+    &__info {
+      font-size: 14px;
+      line-height: 21px;
+      font-weight: 500;
+    }
+  }
+
+  .title {
+    font-size: 24px;
+    line-height: 30px;
+  }
+}
+
+@media (max-width: 360px) {
+  .blocks {
+    grid-template-columns: repeat(1, auto);
+    grid-template-rows: repeat(4, auto);
+  }
+}

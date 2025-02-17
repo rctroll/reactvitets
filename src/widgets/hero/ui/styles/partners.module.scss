@@ -1,0 +1,29 @@
+.partners {
+  display: flex;
+  margin-top: 50px;
+  flex-direction: column;
+  gap: 32px;
+  
+  &__title {
+    margin: 0 auto;
+    max-width: 1240px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .partners {
+    gap: 24px;
+  }   
+}
+
+@media (max-width: 375px) {
+  .partners {
+    gap: 18px;
+    &__title {
+      font-size: 18px;
+      line-height: 22px;
+      font-weight: 500;
+    }
+  }
+}

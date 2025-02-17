@@ -1,0 +1,26 @@
+.aboutUs {
+  background-color: var(--footer-color);
+  padding: 100px 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+
+@media (max-width: 768px) {
+  .aboutUs {
+    padding: 60px 0;
+  }
+}
+
+@media (max-width: 375px) {
+  .aboutUs {
+    padding: 50px 0;
+  }
+
+  .container {
+    gap: 50px;
+  }
+}

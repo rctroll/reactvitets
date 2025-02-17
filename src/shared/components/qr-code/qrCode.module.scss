@@ -1,0 +1,27 @@
+.code {
+  border-radius: 24px;
+  padding: 20px 32px;
+  width: 262px;
+  transform: translateY(-20px);
+  background: #ffffff66;
+  &__button {
+    margin-top: 24px;
+    width: 100%;
+    background: #fff;
+  }
+}
+
+.tag {
+  font-weight: 600;
+  font-size: 16px;
+  text-align: center;
+}
+
+@media (max-width: 375px) {
+  .code__qr {
+    display: none;
+  }
+  .code__button {
+    margin-top: 20px;
+  }
+}
